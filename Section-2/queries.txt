@@ -1,0 +1,79 @@
+#CREAYING THE TABBLES:
+##########################################################
+
+CREATE table mentors (
+    SSN PRIMARYKEY INT,
+    FIRST_NAME TEXT,
+    LAST_NAME TEXT,
+    DOB DATE,
+    LEVEL varchar,
+    SALARY INT,
+    OFFICE TEXT,
+    TOPICS_SPECIALITY FOREINKEY INT
+)
+
+CREATE TABLE department (
+    ID PK INT,
+    NAME TEXT,
+    OFFICE TEXT,
+    TOPICS_SPECIALITY FOREINKEY INT
+)
+
+CREATE TABLE students (
+    STD_NB PK INT,
+    SSN TEXT,
+    FIRST_NAME TEXT,
+    LAST_NAME TEXT,
+    DOB DATE,
+    SKILLS TEXT,
+    COHORT_NB FOREINKEY INT
+)
+
+CREATE TABLE cohorts (
+    ID PRIMARYKEY INT,
+    NUMBER INT,
+    START_DATE DATE,
+    END_DATE DATE,
+    TOPICS FOREINKEY INT
+)
+
+CREATE TABLE topics (
+    ID PRIMARYKEY INT,
+    TITLE TEXT,
+    DESCRIPTION TEXT,
+    COHORT_ID FOREINKEY INT
+)
+
+##############################################################
+#inserting data into tables:
+
+INSERT INTO mentors (SSN, FIRST_NAME, LAST_NAME, DOB, LEVEL, SALARY, OFFICE, TOPICS_SPECIALITY) 
+    values (15, 'zeinab', 'kassem', 2000, 'senior', 100000, '1515', 23);
+
+
+INSERT INTO department (ID, NAME, OFFICE, TOPICS) 
+    VALUES (123, 'FSW', '693', 569);
+
+
+INSERT INTO students (STD_NB, SSN, FIRST_NAME, LAST_NAME, DOB, SKILLS, COHORT_NB) 
+    VALUES (132, '6956', 'KHALED', 'SALEH', 1800, 'HTML, CSS', 6398);
+
+
+INSERT INTO cohorts values(12, 36, 2010, 2011, 36);
+
+INSERT INTO TOPICS (25, 'REACT', 'BASICS OF REACT', 66);
+
+#####################################################################
+
+1-
+SELECT FIRST_NAME, LAST_NAME, LEVEL FROM mentors;
+2-
+SELECT FIRST_NAME FROM mentors WHERE OFFICE = '333';
+3-
+SELECT FIRST_NAME, LAST_NAME, LEVEL FROM mentors WHERE SALARY > 1000;
+4-
+SELECT FIRST_NAME, LAST_NAME FROM mentors INNER JOIN department ON mentors.DEPARTMENT = department.ID WHERE DEPARTMENT.NAME = 'English & Life Skills';
+5-
+SELECT COUNT(*) FROM students WHERE SKILLS = 'Development';
+6-
+SELECT SSN FROM students WHERE SKILLS = 'Development';
