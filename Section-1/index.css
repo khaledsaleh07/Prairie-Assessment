@@ -1,0 +1,65 @@
+.main-section {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.form-section {
+    margin-top: 150px;
+    flex: 1.2;
+    align-items: center;
+}
+
+.img-section {
+    flex: 2;
+}
+
+img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+h2{
+    font-size: 50px;
+    color: black;
+    margin-bottom: -20px;
+}
+
+p {
+    color: gray;
+}
+
+.inp,.btn{
+    padding: 10px;
+    border: solid gray 1px;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.sign-in {
+    margin-top: 20px;
+    background-color: rgb(41, 3, 180);
+    color: white;
+    font-size: 20px;
+    width: 80%;
+}
+
+.google-in {
+    background-color: white;
+    width: 80%;
+    font-size: 20px;
+}
+
+.links {
+    text-decoration: none;
+    color: purple;
+}
+
+.forgot-pw {
+    margin-left: 180px;
+}
+
+.sign-up {
+    margin-left: 20%;
+}
